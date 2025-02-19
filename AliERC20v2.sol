@@ -1989,29 +1989,5 @@ contract AliERC20v2Base is ERC1363, EIP2612, EIP3009, AccessControl {
 }
 
 /**
- * @title Artificial Liquid Intelligence ERC20 Token (Alethea, ALI)
- *
- * @notice Ethereum mainnet implementation with the fixed supply 10,000,000,000 ALI (non-configurable)
- */
-contract AliERC20v2 is AliERC20v2Base {
-	/**
-	 * @dev Deploys the token smart contract,
-	 *      assigns initial token supply to the address specified
-	 *
-	 * @param _initialHolder owner of the initial token supply
-	 */
-	constructor(address _initialHolder) AliERC20v2Base(_initialHolder, 10_000_000_000e18) {}
-}
-
-/**
- * @title Artificial Liquid Intelligence ERC20 Token (Alethea, ALI)
- *
- * @notice Non-Ethereum implementation (L2) with no initial supply
- */
-contract ChildAliERC20v2 is AliERC20v2Base {
-	/**
-	 * @dev Deploys the token smart contract with no initial supply
-	 */
-	constructor() AliERC20v2Base(address(0), 0) {}
-}
+ * 
 
